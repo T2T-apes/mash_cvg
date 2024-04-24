@@ -22,9 +22,9 @@ def get_inputs(wildcards):
         inputs.append("output/{hap}.filt_0_aln.pdf".format(hap=hap))
         inputs.append("output/{hap}.filt_10e6_aln.pdf".format(hap=hap))
         #inputs.append("output/{hap}/{hap}_cvg.filt_10e6_aln.parsed.bed.gz".format(hap=hap))
-        inputs.append("output/{hap}/{hap}_cvg.filt_10e6_aln.sorted.bed.gz".format(hap=hap))
-        inputs.append("output/{hap}/{hap}_cvg.filt_10e6_aln.sorted.bigwig".format(hap=hap))
-        inputs.append("output/{hap}/{hap}_contigs".format(hap=hap))
+        #inputs.append("output/{hap}/{hap}_cvg.filt_10e6_aln.sorted.bed.gz".format(hap=hap))
+        #inputs.append("output/{hap}/{hap}_cvg.filt_10e6_aln.sorted.bigwig".format(hap=hap))
+        #inputs.append("output/{hap}/{hap}_contigs".format(hap=hap))
     return inputs
 
 
@@ -120,7 +120,8 @@ rule make_plots:
     run:
         #fn_input = "/Users/petersudmant/tmp/ape_T2T/primates13.20231122_wfmash-v0.12.2-1-g545db3e-map/{hap}.map.paf"
         #fn_input = "/Users/petersudmant/tmp/ape_T2T/primates16.20231205_wfmash-v0.12.5/{hap}.map.paf"
-        fn_input = "/Users/petersudmant/tmp/ape_T2T/primates16.20231205_wfmash-v0.12.5/{hap}.aln.paf"
+        #fn_input = "/Users/petersudmant/tmp/ape_T2T/primates16.20231205_wfmash-v0.12.5/{hap}.aln.paf"
+        fn_input = "/Users/petersudmant/tmp/ape_T2T/primates16.2024-03-25/{hap}.p70.aln.paf"
         fn_input = fn_input.format(hap=wildcards.hap)
         #outdir = "/Users/petersudmant/Documents/science/sudmantlab/projects/primate_T2T/great_ape_T2T/plot_wfmash_alns/outdir"
         outdir = "output/{hap}".format(hap=wildcards.hap)
